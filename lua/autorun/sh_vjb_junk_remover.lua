@@ -53,5 +53,8 @@ hook.Add( "InitPostEntity", "RemoveVJBJunkSwepsSents", function()
             entsList[class] = nil
         end
     end
-    RunConsoleCommand( "spawnmenu_reload" )
+    
+    if CLIENT then
+        RunConsoleCommand( "spawnmenu_reload" )
+    end
 end )
